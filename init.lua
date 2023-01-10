@@ -8,7 +8,7 @@ require("stijn.packer")
 
 local opt=vim.opt
 
-vim.opt.clipboard = "unnamedplus"
+opt.clipboard="unnamedplus"
 
 --filetype plugin indent on
 --opt.nocompatible=true
@@ -39,3 +39,16 @@ opt.colorcolumn="120"
 --inoremap <leader>date <C-R>=strftime("!%Y-%m-$d T%H:%M:%SZ")<CR>
 --inoremap <leader>ISOd <C-R>lua require'dates'.ISODate()<CR>
 --inoremap <leader>date <C-R>lua require("dates").UTC_ISO_DATE()
+
+vim.g.clipboard = {
+  name = "win32yank-wsl",
+  copy = {
+    ["+"] = "win32yank.exe -i --crlf",
+    [""] = "win32yank.exe -i --crlf"
+  },
+  paste = {
+    ["+"] = "win32yank.exe -o --crlf",
+    [""] = "win32yank.exe -o --crlf"
+  },
+  cache_enable = 0,
+}
