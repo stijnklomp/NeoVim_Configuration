@@ -10,4 +10,5 @@ inoremap ("<leader>date", "<cmd>:let old_tz=$TZ<CR><cmd>:let $TZ='UTC'<CR><C-R>=
 -- Lexplore and terminal setup 1
 nnoremap ("<leader>1", "<cmd>:Lexplore<CR>20<C-W><Bar><C-W>w<C-W>s<C-W>w<cmd>:term<CR>6<C-W>_<C-W>k")
 
+-- Show/Hide search highlights
 nnoremap ("<leader>n", "<cmd>:set hlsearch!<CR>")
